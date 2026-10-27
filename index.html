@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ходячие в ночи: Жнецы Страданий</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <canvas id="nightSkyCanvas"></canvas>
+
+    <div class="side-ornaments left">
+        <div class="ornament-item">
+            <svg viewBox="0 0 24 24"><path d="M12 3c-4 0-8 3-8 8 0 3 2 6 5 7l-1 3h8l-1-3c3-1 5-4 5-7 0-5-4-8-8-8z"/><circle cx="10" cy="9" r="1"/><path d="M12 12l3-2"/></svg>
+        </div>
+        <div class="ornament-item">
+            <svg viewBox="0 0 24 24"><path d="M12 2L19 9L12 22L5 9L12 2Z"/><path d="M12 6v12"/><path d="M8 10h8"/></svg>
+        </div>
+        <div class="ornament-item">
+            <svg viewBox="0 0 24 24"><path d="M14.5 17.5L3 6V3h3l11.5 11.5"/><path d="M13 19l6-6"/><path d="M16 16l4 4"/><path d="M19 21l2-2"/></svg>
+        </div>
+    </div>
+
+    <div class="side-ornaments right">
+        <div class="ornament-item">
+            <svg viewBox="0 0 24 24"><path d="M17 3C10 3 5 8 5 15c0 3 1 5 1 5s2 1 5 1c7 0 12-5 12-12 0-3-2-6-6-6z"/><path d="M6 18L18 6"/></svg>
+        </div>
+        <div class="ornament-item">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="13" r="7"/><path d="M12 2v4"/><path d="M12 9v8"/><path d="M8 13h8"/></svg>
+        </div>
+        <div class="ornament-item">
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15 9 22 9 16 14 18 21 12 17 6 21 8 14 2 9 9 9"/></svg>
+        </div>
+    </div>
+
+    <div class="page-wrapper">
+
+        <section id="page1" class="page-section active">
+            <header class="book-header">
+                <div class="fan-badge">Фанатский интерактивный текстовый квест по мотивам книги</div>
+                <h1 class="book-title">Ходячие в ночи</h1>
+                <div class="book-subtitle">Жнецы Страданий</div>
+                <div class="authors-line">По произведению Алёны Харитоновой и Екатерины Казаковой</div>
+            </header>
+
+            <div class="glowing-lore-frame">
+                <h2 class="welcome-heading">Здравствуй, путник. Ночь уже близко…</h2>
+                <p class="lore-paragraph">
+                    Едва солнце скрывается за верхушками векового леса, мир за порогом перестает принадлежать живым. Впотьмах из жальников и оврагов выходят <span class="highlight-word">Ходячие в Ночи</span> — кровососы, волколаки и вурдалаки, чей дурманящий Зов заставляет людей собственными руками размыкать охранные круги и шагать навстречу гибели.
+                </p>
+                <p class="lore-paragraph">
+                    Семнадцатилетняя дочка гончара <span class="highlight-word">Лесана</span> считала дни до весны, ожидая сватов от любимого кузнецова сына Мируты и бережно сжимая на груди подаренную им деревянную ладанку. Но вместо свадебного поезда на деревенской улице показался серый в яблоках конь посланника древней <span class="highlight-word">Цитадели</span>.
+                </p>
+                <p class="lore-paragraph">
+                    Холодный взгляд креффа Клесха распознал в девушке спящий Дар ратоборца. Впереди — шесть дней опасного пути сквозь ночную чащу, тяжелые ворота неприступной твердыни, дружба с Тамиром и Айлишей и суровая наука тех, кому оставлено лишь одно право — умирать, защищая живых. Выстоит ли вчерашняя невеста там, где любая слабость стоит жизни?
+                </p>
+            </div>
+
+            <button class="btn-portal" onclick="switchPage('page2')">
+                Шагнуть за врата Цитадели ➔
+            </button>
+        </section>
+
+        <section id="page2" class="page-section">
+            <header class="book-header">
+                <div class="fan-badge">Интерактивное издание для Android</div>
+                <h2 class="book-title">Цитадель ждет</h2>
+            </header>
+
+            <div class="download-card">
+                <div class="seal-circle">
+                    <svg viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="9"/>
+                        <polygon points="12 5 14 10 19 12 14 14 12 19 10 14 5 12 10 10"/>
+                    </svg>
+                </div>
+
+                <div class="citadel-tag">ХРАНИЛИЩЕ ЦИТАДЕЛИ • ANDROID ИЗДАНИЕ</div>
+                <div class="download-title-line1">Ходячие в ночи</div>
+                <div class="download-title-line2">Жнецы страданий</div>
+
+                <a href="Ходячие_в_ночи.apk" download class="btn-download">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 3v12m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2"/>
+                    </svg>
+                    <span>Загрузить Ходячие_в_ночи.apk</span>
+                </a>
+            </div>
+
+            <button class="btn-back" onclick="switchPage('page1')">
+                ← Вернуться к прологу
+            </button>
+        </section>
+
+    </div>
+
+    <svg class="forest-horizon" viewBox="0 0 1440 120" preserveAspectRatio="none">
+        <path fill="#0b0908" d="M0,120 L0,85 L30,45 L55,85 L90,35 L125,85 L160,55 L195,90 L240,30 L280,85 L330,50 L370,85 L420,40 L460,85 L520,60 L560,85 L620,25 L650,25 L665,5 L680,25 L710,15 L730,50 L750,10 L770,50 L800,30 L840,85 L890,45 L935,85 L980,35 L1030,85 L1080,50 L1130,85 L1185,30 L1235,85 L1290,45 L1340,85 L1390,40 L1440,85 L1440,120 Z"/>
+    </svg>
+
+    <script src="script.js"></script>
+</body>
+</html>
