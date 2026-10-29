@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0D0D0D"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:padding="14dp">
+
+    <!-- Верхняя панель: Заголовок, Звук, Главы и Настройки -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="serif"
+            android:text="Ходячие в ночи"
+            android:textColor="#D7CCC8"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- Кнопка быстрого отключения музыки -->
+        <Button
+            android:id="@+id/btnQuickMute"
+            android:layout_width="40dp"
+            android:layout_height="38dp"
+            android:layout_marginEnd="6dp"
+            android:backgroundTint="#26211E"
+            android:padding="0dp"
+            android:text="🔊"
+            android:textColor="#EAE4DC"
+            android:textSize="14sp" />
+
+        <!-- Кнопка выбора главы -->
+        <Button
+            android:id="@+id/btnChapters"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_marginEnd="6dp"
+            android:backgroundTint="#26211E"
+            android:minWidth="0dp"
+            android:paddingHorizontal="10dp"
+            android:text="Главы"
+            android:textAllCaps="false"
+            android:textColor="#EAE4DC"
+            android:textSize="13sp" />
+
+        <!-- Кнопка «Настройки» -->
+        <Button
+            android:id="@+id/btnSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:backgroundTint="#26211E"
+            android:minWidth="0dp"
+            android:paddingHorizontal="10dp"
+            android:text="Настройки"
+            android:textAllCaps="false"
+            android:textColor="#EAE4DC"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <!-- Декоративная рамка вокруг текста квеста -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#4A3F35"
+        android:padding="2dp">
+
+        <!-- Внутреннее поле внутри рамки с выровненным текстом -->
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#141210"
+            android:fillViewport="true"
+            android:padding="18dp">
+
+            <TextView
+                android:id="@+id/tvStoryText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="serif"
+                android:justificationMode="inter_word"
+                android:lineSpacingExtra="6dp"
+                android:paddingBottom="20dp"
+                android:textColor="#E6DFD5"
+                android:textSize="18sp" />
+        </ScrollView>
+    </FrameLayout>
+
+    <!-- Контейнер для вариантов действий и стрелки перехода -->
+    <LinearLayout
+        android:id="@+id/choicesContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="12dp" />
+
+</LinearLayout>
